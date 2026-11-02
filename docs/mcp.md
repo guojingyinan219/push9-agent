@@ -7,7 +7,7 @@
 | 本地 stdio | `npx --yes --allow-git=root --package=github:guojingyinan219/push9-agent#v0.1.2 push9-agent mcp` | 启动环境 `PUSH9_TOKEN` | 支持本地 MCP 进程的 Agent |
 | 自托管 Streamable HTTP | 自己部署的 `https://mcp.example.com/mcp` | 每个请求 `Authorization: Bearer aip_...` | 支持 HTTP MCP 和自定义 Bearer 的客户端 |
 
-**`https://push9.top` 是推送 API 服务地址，不代表其 `/mcp` 已部署。** 本仓库提供可运行的远程服务源码和容器配置；托管远程地址上线前，先使用本地 stdio，即可向现有 Push9 API 推送。只支持 OAuth 或旧 SSE 的客户端暂不能直接使用此 HTTP 接入。
+托管远程地址现为 **`https://push9.top/mcp`**，直接接入见 [托管 MCP 文档](hosted.md)。也可使用本页的本地 stdio 或 Docker 自托管方式。只支持 OAuth 或旧 SSE 的客户端暂不能直接使用此 HTTP 接入。
 
 Skill 与 MCP 可任选一种；同时安装时，Agent 每个事件只调用一次，避免重复推送。
 

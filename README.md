@@ -2,6 +2,8 @@
 
 为 Agent 提供任务完成、失败、需要人工确认时的 Push9 通知。包含可独立安装的 **Agent Skill** 和基于官方 MCP SDK 的 **MCP Server**。两者均调用现有 `POST /api/v1/send`，不需要修改业务服务或安装微信插件。
 
+托管远程 MCP：**`https://push9.top/mcp`**，可直接使用自己的 API Token 接入，无需本地 Node.js。[托管接入步骤与 Codex 配置](docs/hosted.md)。
+
 ## 一键安装 Skill
 
 要求 Node.js **20.19+**、npm 和可访问 GitHub 的网络。Windows 用户需安装 Git；`npx` 从 GitHub Git 仓库安装时可能调用 Git。
