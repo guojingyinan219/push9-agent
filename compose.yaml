@@ -1,0 +1,14 @@
+services:
+  push9-mcp:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3110:3110"
+    environment:
+      PUSH9_BASE_URL: https://push9.top
+      PUSH9_MCP_ALLOWED_HOSTS: ${PUSH9_MCP_ALLOWED_HOSTS:-localhost,127.0.0.1}
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

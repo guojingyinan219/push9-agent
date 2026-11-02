@@ -1,0 +1,4 @@
+interface:
+  display_name: "Push9 Notify"
+  short_description: "Send authorized task notifications through Push9"
+  default_prompt: "Use $push9-notify to notify me when this task finishes."

@@ -1,0 +1,32 @@
+{
+  "name": "push9-agent",
+  "version": "0.1.0",
+  "description": "Push9 Agent Skill installer and MCP server",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "push9-agent": "bin/push9-agent.mjs"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "start": "node bin/push9-agent.mjs mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "express": "5.3.0",
+    "zod": "4.6.7"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "README.md",
+    "docs",
+    "Dockerfile",
+    "compose.yaml",
+    ".env.example"
+  ]
+}
