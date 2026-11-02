@@ -1,6 +1,6 @@
 {
   "name": "push9-agent",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Push9 Agent Skill installer and MCP server",
   "type": "module",
   "private": true,

@@ -11,13 +11,13 @@
 Codex：
 
 ```bash
-npx --yes --allow-git=root --package=github:guojingyinan219/push9-agent#v0.1.1 push9-agent install-skill --agent codex
+npx --yes --allow-git=root --package=github:guojingyinan219/push9-agent#v0.1.2 push9-agent install-skill --agent codex
 ```
 
 Claude Code：
 
 ```bash
-npx --yes --allow-git=root --package=github:guojingyinan219/push9-agent#v0.1.1 push9-agent install-skill --agent claude
+npx --yes --allow-git=root --package=github:guojingyinan219/push9-agent#v0.1.2 push9-agent install-skill --agent claude
 ```
 
 安装器只复制 Skill，不配置密钥、不发送通知、不改 MCP 配置。Codex 默认目录为 `~/.agents/skills/push9-notify`，Claude Code 为 `~/.claude/skills/push9-notify`。其他支持 `SKILL.md` 的客户端可用 `--dir /absolute/path/to/skills` 指定其 Skill 父目录。已有目录不会被覆盖，更新前请先检查并备份自己的修改，再移除旧目录后重装。
@@ -61,7 +61,7 @@ Skill 使用 `skills/push9-notify/scripts/send.mjs`；它依赖同目录的两�
   "mcpServers": {
     "push9": {
       "command": "npx",
-      "args": ["--yes", "--allow-git=root", "--package=github:guojingyinan219/push9-agent#v0.1.1", "push9-agent", "mcp"],
+      "args": ["--yes", "--allow-git=root", "--package=github:guojingyinan219/push9-agent#v0.1.2", "push9-agent", "mcp"],
       "env": {
         "PUSH9_BASE_URL": "https://push9.top",
         "PUSH9_TOKEN": "aip_replace_with_your_token",
@@ -79,7 +79,7 @@ Skill 使用 `skills/push9-notify/scripts/send.mjs`；它依赖同目录的两�
 ## 源码运行与验证
 
 ```bash
-git clone --branch v0.1.1 --depth 1 https://github.com/guojingyinan219/push9-agent.git
+git clone --branch v0.1.2 --depth 1 https://github.com/guojingyinan219/push9-agent.git
 cd push9-agent
 npm ci --ignore-scripts
 npm test

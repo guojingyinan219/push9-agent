@@ -10,7 +10,7 @@ const split = value => (value || '').split(',').map(v => v.trim()).filter(Boolea
 
 export function createServer({ token, baseUrl = 'https://push9.top', topic }) {
   sendEndpoint(baseUrl);
-  const server = new McpServer({ name: 'push9', version: '0.1.1' }, {
+  const server = new McpServer({ name: 'push9', version: '0.1.2' }, {
     instructions: 'Send only user-authorized notifications. A receipt means accepted, not delivered. Do not blindly retry unknown outcomes; reuse the same event key and content for authorized retries.',
   });
   server.registerTool('push9_send_message', {
